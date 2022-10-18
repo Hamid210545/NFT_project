@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Outfit;
+    src: url(./Outfit-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Outfit;
+}
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue: hsl(217, 54%, 11%);
+    --light-dark-blue: hsl(216, 50%, 16%);
+    --dark-grey-blue: hsl(215, 32%, 27%);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-blue);
+}
+
+.card {
+    max-width: 330px;
+    background: var(--light-dark-blue);
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card .img {
+    position: relative;
+    border-radius: 10px;
+}
+
+.img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card .img .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.overlay:hover {
+    cursor: pointer;
+}
+
+.overlay img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 45%;
+    left: 42%;
+}
+
+.overlay img:hover {
+    cursor: pointer;
+}
+
+.overlay.active {
+    display: none;
+    opacity: 0;
+    background-color: transparent;
+}
+
+.card-txt {
+    padding-top: 20px;
+}
+
+h4 {
+    font-size: 1.7rem;
+    color: var(--Cyan);
+    padding: 5px;
+}
+
+p {
+    font-size: 1.7rem;
+    padding: 5px;
+    color: var(--dark-grey-blue);
+    padding-bottom: 10px;
+}
+
+.card .price-and-time {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(63, 62, 62);
+}
+
+.price-and-time .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.price-and-time .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.price-and-time .time img {
+    width: 20px;
+    margin-top: -5px;
+}
+
+.creator {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    margin-left: -25px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.creator img {
+    width: 33px;
+    height: 33px;
+    border: 2px solid rgb(118, 118, 118);
+    border-radius: 50%;
+}
+
+.creator p {
+    margin-top: 5px;
+}
+
+.creator p span {
+    color: var(--Cyan);
+}
